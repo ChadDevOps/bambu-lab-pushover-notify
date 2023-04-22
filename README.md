@@ -48,7 +48,7 @@ After connecting to the printer expand "Device". The Alphanumberic ID listed is 
 
 The Device ID (serial number) can also be found in Bambu Studio. Navigate to the Device Tab on top, then Update on left.
 
-<img src="./Bambu_Studio_Device_ID?raw=true" width="250">
+<img src="./Bambu_Studio_Device_ID.png?raw=true" width="250">
 
 Clone this repo
 ```
