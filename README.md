@@ -10,7 +10,7 @@ Why create this script? The iPhone Bambu Handy app notifications are not insiste
 - Windows. May work with linux platforms with some tweaks..
 - Git
 - Python
-- mqtt-explorer
+- mqtt-explorer - Optional
 - Basic knowledge of git, windows scheduled tasks, task scheduler, starting an administrative powershell session, etc.
 - A pushover account [https://pushover.net](https://pushover.net) is required and a pushover application created [https://pushover.net/apps/build](https://pushover.net/apps/build).
 
@@ -37,7 +37,7 @@ py -m pip install -U datetime
 py -m pip install -U tzlocal
 ```
 
-Install mqtt-explorer, this will be used to obtain the device ID from the printer. You'll need to know your X1C access code, which can be obtained from the X1C screen by navigating to the cog wheel and clicking the network tab.
+Optional: Install mqtt-explorer, this can be used to obtain the device ID (serial number) from the printer. You'll need to know your X1C access code, which can be obtained from the X1C screen by navigating to the cog wheel and clicking the network tab.
 ```
 choco install mqtt-explorer --pre
 ```
@@ -46,6 +46,9 @@ After connecting to the printer expand "Device". The Alphanumberic ID listed is 
 
 <img src="./MQTT_Explorer_Settings.png?raw=true" width="250">
 
+The Device ID (serial number) can also be found in Bambu Studio. Navigate to the Device Tab on top, then Update on left.
+
+<img src="./Bambu_Studio_Device_ID?raw=true" width="250">
 
 Clone this repo
 ```
@@ -66,7 +69,7 @@ host = '127.0.0.7' # bambu x1c ipv4 address
 port = 8883 # default port
 user = 'bblp' # default user
 password = 'alphanumeric_code' # access code from bambu x1c screen under cog wheel / network tab
-device_id = '0SOMETHING' # use mqtt-explorer to obtain, see image below
+device_id = '0SOMETHING' # use mqtt-explorer to obtain or Bambu Studio, see details above
 ```
 
 To start monitoring on Windows startup, open task scheduler and import bambu_monitor.xml. Modify paths in xml if you did not clone to the C: drive. This will launch run.bat on windows startup as SYSTEM.
