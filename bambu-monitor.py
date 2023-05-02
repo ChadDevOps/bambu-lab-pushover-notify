@@ -92,9 +92,11 @@ def on_message(client, userdata, msg):
 						fail_reason = "Arrr! Swab the poop deck!"
 					elif(error_code == 32771):
 						fail_reason = "Spaghetti and meatballs!"
+					elif(error_code == 32774):
+						fail_reason = "Build plate mismatch!"
 					else:
 						fail_reason = dataDict['print']['fail_reason']
-					msg_text = msg_text + "<li>fail_reason: "+ dataDict['print']['fail_reason'] + "</li>"
+					msg_text = msg_text + "<li>fail_reason: "+ fail_reason + "</li>"
 					priority = 1
 
 				# pushover notify
