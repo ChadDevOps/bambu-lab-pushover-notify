@@ -63,6 +63,8 @@ Update [vardata.py](vardata.py) with your settings.
 my_pushover_user = "your_pushover_user_key" # pushover user key
 my_pushover_app = "the_application_token" # pushover app key
 notify_at_percent = 50 # additional percent you wish to be notified, e.g. 50% would be 50.
+pause_error_secs = 10 # seconds
+repeat_errors = 2 # number of times
 
 # Bambu login information
 host = '127.0.0.7' # bambu x1c ipv4 address
