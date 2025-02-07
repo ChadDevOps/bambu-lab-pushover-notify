@@ -98,7 +98,7 @@ def on_message(client, userdata, msg):
 						fail_reason = "Arrr! Swab the poop deck!"
 					elif(error_code == 32771):
 						fail_reason = "Spaghetti and meatballs!"
-					elif(error_code == 32773):
+					elif(error_code == 32773 or error_code == 32772):
 						fail_reason = "Didn't pull out!"
 					elif(error_code == 32774):
 						fail_reason = "Build plate mismatch!"
